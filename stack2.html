@@ -3,12 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stack 2 – Modules</title>
+<title>Stack 2 – Modules d’action</title>
 <link rel="stylesheet" href="stack2.css">
 </head>
 <body>
-
-<h1>Stack 2 – Modules opérationnels</h1>
+<h1>Stack 2 – Modules d’action</h1>
 
 <div class="module" id="jalonsModule">
   <h2>Jalons & Sous-actions</h2>
@@ -17,12 +16,19 @@
 
 <div class="module" id="messagesModule">
   <h2>Messages / Emails</h2>
-  <table id="messagesTable"><thead><tr><th>✓</th><th>Destinataire</th><th>Sujet</th><th>Texte</th></tr></thead><tbody></tbody></table>
-  <select id="mailPromptSelect">
-    <option value="1">Template formel</option>
-    <option value="2">Template amical</option>
-  </select>
-  <button id="generateMailBtn">Push à LLM</button>
+  <table id="messagesTable">
+    <thead>
+      <tr><th>À traiter</th><th>Destinataire</th><th>Sujet</th><th>Texte</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <div class="mail-actions">
+    <select id="mailPromptSelect">
+      <option value="1">Template formel</option>
+      <option value="2">Template amical</option>
+    </select>
+    <button id="generateMailBtn">Push à LLM</button>
+  </div>
 </div>
 
 <div class="module" id="rdvModule">
@@ -33,20 +39,15 @@
 <div class="module" id="livrablesModule">
   <h2>Livrables</h2>
   <ul id="livrablesList"></ul>
-  <select id="livrablePromptSelect">
-    <option value="1">Plan détaillé</option>
-    <option value="2">Résumé exécutif</option>
-    <option value="3">Checklist rapide</option>
-  </select>
-  <button id="generateLivrableBtn">Push à LLM</button>
+  <div class="livrable-actions">
+    <select id="livrablePromptSelect">
+      <option value="1">Plan détaillé</option>
+      <option value="2">Résumé exécutif</option>
+      <option value="3">Checklist rapide</option>
+    </select>
+    <button id="generateLivrableBtn">Push à LLM</button>
+  </div>
 </div>
-
-<select id="llmSelect">
-  <option value="https://chat.openai.com/">GPT</option>
-  <option value="https://perplexity.ai/">Perplexity</option>
-  <option value="https://claude.ai/">Claude</option>
-  <option value="https://www.mistral.ai/">Mistral</option>
-</select>
 
 <script src="stack2.js"></script>
 </body>
